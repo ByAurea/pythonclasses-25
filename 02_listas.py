@@ -5,18 +5,21 @@ soma de todos eles. NÃO utilize a função sum do python. Implemente a
 lógica você mesmo!
 '''
 def soma(lista):
-    return 0
+    total = 0
+    for el in lista:
+        total = total + el
+    return total
 
 #faça uma função que recebe uma lista de números e retorna a média.
 #ou seja, soma todos os números e divide pela quantidade de numeros
 
 def media(lista):
-    resposta = 0 
+    total = 0 
     tamanho = 0
     for el in lista:
-        resposta = resposta + el
+        total = total + el
         tamanho = len(lista)
-    return resposta/tamanho
+    return total/tamanho
 
 media([10, 20, 30])
 
