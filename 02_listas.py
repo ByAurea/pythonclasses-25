@@ -15,7 +15,7 @@ def media(lista):
     tamanho = 0
     for el in lista:
         resposta = resposta + el
-        tamanho = tamanho + 1
+        tamanho = len(lista)
     return resposta/tamanho
 
 media([10, 20, 30])
