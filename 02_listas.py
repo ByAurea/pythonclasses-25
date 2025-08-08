@@ -9,8 +9,16 @@ def soma(lista):
 
 #faça uma função que recebe uma lista de números e retorna a média.
 #ou seja, soma todos os números e divide pela quantidade de numeros
+
 def media(lista):
-    return 12
+    resposta = 0 
+    tamanho = 0
+    for el in lista:
+        resposta = resposta + el
+        tamanho = tamanho + 1
+    return resposta/tamanho
+
+media([10, 20, 30])
 
 #faça uma função que acrescenta o proximo numero a uma lista.
 #por exemplo cresce([7,8]) deve devolver [7,8,9]
@@ -151,4 +159,6 @@ try:
     runTests();
 except:
     pass
+
+
 
