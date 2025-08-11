@@ -120,17 +120,18 @@ Implemente uma função primeira_linha,
 que devolve a primeira linha do mapa.
 
 Ou seja, se o mapa é
+'''
 mapa = [['.','b','.'],
         ['a','.','.'],
         ['.','.','c'],
         ['.','.','.']]
 
-Então primeira_linha(mapa) devolve a lista ['.','b','.']
-'''
+# Então primeira_linha(mapa) devolve a lista ['.','b','.']
+
 # se voce fez essa funcao corretamente, 
 # vai passar o teste 02
 def primeira_linha(mapa):
-    pass
+    return mapa[0]
 
 '''
 Implemente uma função linha_n. Ao chamar linha_n(mapa,3), pegamos, no mapa, a linha de índice 3 (lembre-se que essa é a quarta linha! A primeira tem indice 0, a segunda indice 1, a terceira indice 2)
@@ -138,7 +139,7 @@ Implemente uma função linha_n. Ao chamar linha_n(mapa,3), pegamos, no mapa, a 
 # se voce fez essa funcao corretamente, 
 # vai passar o teste 03
 def linha_n(mapa,linha):
-    pass
+     return mapa[linha]
 
 '''
 Implemente um funcao posicao(mapa,x,y). Ao chamar posicao(mapa,x,y), pegamos, no mapa, a linha de índice x, e depois o elemento de indice y dessa linha
@@ -154,7 +155,7 @@ e retornamos o elemento de indice 2 (ou seja, 'd')
 # se voce fez essa funcao corretamente, 
 # vai passar o teste 04
 def posicao(mapa,linha,coluna):
-    pass
+    return mapa[linha][coluna]
 
 '''
 Exercício 05: Faremos uma função "coloca" para alterar o desenho. Suponha que começamos com
@@ -177,7 +178,7 @@ l3  .  .  .  .
 '''
 
 def coloca(mapa, n_linha, n_coluna, simbolo):
-    pass
+    mapa[n_linha][n_coluna] = simbolo
 
 
 '''
@@ -204,7 +205,10 @@ xxxx
 # se voce fez essa funcao corretamente, 
 # vai passar o teste 06
 def marca_linha(mapa, n_linha, simbolo):
-    pass
+    total_colunas = len(mapa[n_linha])
+    for n_coluna in range(some):
+        mapa[n_linha][n_coluna] = simbolo
+
 
 '''
 Também podemos fazer uma função analoga chamada marca_coluna, e passar o teste 07
