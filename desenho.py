@@ -35,10 +35,10 @@ toad2 = [['.', '.', '.', '.', '.', 'x', 'x', 'x', 'x', 'x', 'x', '.', '.', '.', 
 
 
 
-mostra_matplot = True
+mostra_matplot = False
 mostra_string  = False
 mostra_lista_de_listas = False
-roda_testes = False
+roda_testes = True
 
 
 
@@ -85,24 +85,25 @@ Repare que a primeira linha do desenho (.xa) está representada por uma lista
 
 '''
 Considere o seguinte desenho
+'''
 
 mapa = [ ['.','x','a'], 
          ['c','.','l'], 
          ['.','k','.'] ] 
 
-'''
+
 
 #qual o valor presente na posicao 0,1? (ou seja, linha 0, coluna 1)?
-valor1 = 'coloque aqui'
+valor1 = 'x'
 # ao preencher esse valor, voce passa o teste 01a
 
 #qual o valor presente na posicao 1,1? (ou seja, linha 1, coluna 1)?
-valor2 = 'coloque aqui'
+valor2 = '.'
 # ao preencher esse valor, voce passa o teste 01b
 
 
 #qual o valor presente na posicao 2,1? (ou seja, linha 2, coluna 1)?
-valor3 = 'coloque aqui'
+valor3 = 'k'
 # ao preencher esse valor, voce passa o teste 01c
 
 
