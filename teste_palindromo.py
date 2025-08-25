@@ -2,7 +2,17 @@
 # Faça uma função palindromo, que recebe uma string e responde True se ela é um palindromo, False caso contrário. Palindromo é uma string espelhada. palindromo(“aba”) deve retornar True, palindromo(“abacate”) deve retornar false
 
 def palindromo(string):
-    pass
+    inicio = 0
+    final = len(string)-1
+    while final >= inicio:
+         if string[inicio] == string[final]:
+              return False
+         inicio = inicio + 1
+         final = final - 1
+    return True
+        
+
+             
 
 import unittest
 
