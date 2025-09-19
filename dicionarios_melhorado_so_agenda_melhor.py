@@ -78,10 +78,18 @@ lista com um único contato: ['marta']
 '''
 
 def sem_email(agenda):
-     for pessoa in agenda.keys():
-        #  print(agenda[pessoa])
-        print('email' in agenda[pessoa].keys())
-
+    resp = []
+    for pessoa in agenda.keys():
+        #  print(pessoa, agenda[pessoa])
+        #  print('email' in agenda[pessoa].keys())
+        # \\
+        #dic_pessoa = agenda[pessoa]
+        #chaves_do_d_da_p = agenda[pessoa].keys()
+        #pessoa_tem_email = 'email' in agenda[pessoa].keys()
+        #if not pessoa_tem_email:
+        if 'email' not in agenda[pessoa].keys():
+            resp.append(pessoa)
+    return resp
 '''
 Crie uma função conta telefones, que recebe uma agenda (nessa versão
 mais nova) e retorna a quantidade de números de telefone registrados.
