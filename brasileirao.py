@@ -1,5 +1,8 @@
 import json
 from pprint import pprint
+
+##AULA01(25/09/2025)
+
 '''
 Nessa atividade, vamos usar dados do campeonato brasileiro 2018
 (brasileirao) para estudar como acessar listas,
@@ -70,8 +73,9 @@ print("\n\n\n") #apenas uns espaços pra te ajudar a ler. Deixe descomentado
 #print('faixas de classificacao e rebaixamento')
 #pprint(dados2018['fases']['2700']['faixas-classificacao'])
 
-# print('classificacao dos times no fim do campeonato')
-# print(dados2018['fases']['2700']['classificacao']['grupo']['Único'])
+#print('classificacao dos times no fim do campeonato')
+#print(dados2018['fases']['2700']['classificacao']['grupo']['Único'])
+#print(dados2018['fases']['2700']['classificacao']['grupo']['Único'][0])
 
 
 print("\n\n\n") #apenas uns espaços pra te ajudar a ler
@@ -89,9 +93,9 @@ contem todas as informacoes do arquivo
 json que acompanha essa atividade 
 '''
 def nome_do_time(dados,id_numerica):
-   pass
-
+    return dados['equipes'][id_numerica]['nome-comum']
 '''
+
 A proxima funcao recebe somente o dicionario dos dados do brasileirao
 
 Ela retorna a id do time que foi campeao.
@@ -100,7 +104,7 @@ Lembre-se de usar a variavel dados, que foi passada para a funcao.
 Nao use dados2018, a variavel global que tinha sido definida antes
 '''
 def id_campeao(dados):
-    pass
+    return dados['fases']['2700']['id']
 
 '''
 A proxima funcao recebe somente o dicionario dos dados do brasileirao
