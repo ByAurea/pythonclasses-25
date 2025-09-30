@@ -94,7 +94,9 @@ json que acompanha essa atividade
 '''
 def nome_do_time(dados,id_numerica):
     return dados['equipes'][id_numerica]['nome-comum']
+
 '''
+##AULA02(29/09/2025)
 
 A proxima funcao recebe somente o dicionario dos dados do brasileirao
 
@@ -104,7 +106,9 @@ Lembre-se de usar a variavel dados, que foi passada para a funcao.
 Nao use dados2018, a variavel global que tinha sido definida antes
 '''
 def id_campeao(dados):
-    return dados['fases']['2700']['id']
+    lista_classificados = ['fases']['2700']['classificacao']['grupo']['unico']
+    campeao = lista_classificados['0']
+    return campeao
 
 '''
 A proxima funcao recebe somente o dicionario dos dados do brasileirao
@@ -112,14 +116,19 @@ A proxima funcao recebe somente o dicionario dos dados do brasileirao
 Ela retorna o nome-comum do time que foi campeao.
 '''
 def nome_campeao(dados):
-    pass
+    # lista_classificados = ['fases']['2700']['classificacao']['grupo']['unico']
+    # campeao = lista_classificados['0']
+    # return dados['equipes'][campeao]['nome-comum']
+    campeao = id_campeao(dados)
+    nome = nome_do_time(dados, campeao)
+    return nome
 
 
 
 '''
 A proxima funcao recebe apenas o dicionario dos dados do brasileirao
 
-Ela retorna o nro de times que o brasileirao qualifica para a libertadores
+Ela retorna o nro ,de times que o brasileirao qualifica para a libertadores
 
 Note. Esse numero está nos dados que eu forneci. Voce deve pegar dos
 dados. Nao basta retornar o valor correto, tem que acessar os dados
@@ -137,7 +146,8 @@ as strings "1" e "5" em números inteiros
 '''
 
 def qtos_libertadores(dados):
-    pass
+    str_numeros = dados['fases']['2700']['faixas-classificacao']['classifica1']['faixa']
+    return int(str_numeros.split("-")[-1])
 
 '''
 A proxima funcao recebe um tamanho, e retorna uma lista
@@ -145,8 +155,10 @@ das ids dos times melhor classificados.
 
 O tamanho da lista que deve ser retornada é o argumento "numero_de_times"
 '''
-def ids_dos_melhor_classificados(dados,numero_de_times):
-    pass
+def ids_dos_melhores_classificados(dados,numero_de_times):
+    lista_classificados = dados['fases']['2700']['classificacao']['grupo']['unico']
+    return lista_classificados[0:numero_de_times]
+
 
 '''
 A proxima funcao usa as duas anteriores para retornar uma 
@@ -160,7 +172,9 @@ A funcao so recebe o dicionario de dados do brasileirao
 
 '''
 def classificados_libertadores(dados):
-    pass
+    qtos = qtos_libertadores(dados)
+    ids = ids_dos_melhores_classificados(dados, qtos)
+    return ids
 
 
 '''
@@ -168,7 +182,11 @@ Usando as duas funcoes anteriores, podemos fazer uma que retorna os nomes dos cl
 '''
 
 def nomes_classificados_libertadores(dados):
-    pass
+    ids = classificados_libertadores(dados)
+    resposta = []
+    for id in ids:
+        resposta.append(nome_do_time(dados,id))
+    return resposta
 
 '''
 Nos nossos dados, cada time tem um id, uma identificacao numerica.
