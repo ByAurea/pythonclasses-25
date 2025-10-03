@@ -209,8 +209,11 @@ def ids_dos_times_de_um_jogo(dados,id_jogo):
     return time1,time2 #assim a gente retorna as duas respostas em um unico return
 '''
 def ids_dos_times_de_um_jogo(dados,id_jogo):
-    time1 = 12
-    time2 = 13
+    jogo = dados['fases']['2700']['jogos']['id'][id_jogo
+                                                 ]
+    time1 = jogo['time1']
+    time2 = jogo['time2']
+    
     return time1,time2 #assim a gente retorna as duas respostas em um unico return
 
 '''
