@@ -47,13 +47,13 @@ A sequencia de números visitados foi [10,5,7]
 
 EXERCICIO: se eu quiser procurar 40 na árvore, que números visitarei?
 '''
-busca40=[]
+busca40=[10,20,30]
 '''
 E se eu quiser buscar o 15? E o 3? E o 5?
 '''
-busca15=[]
-busca3=[]
-busca5=[]
+busca15=[10,20]
+busca3=[10,5,2]
+busca5=[10,5]
 
 '''
 Uma outra questão importante é a inserção.
@@ -84,9 +84,9 @@ letras1 = ['A','C','D']
 Faça o mesmo para as duas listas abaixo
 '''
 numeros2 = [19,21,33,7]
-letras2 =  []
+letras2 =  ['C','D','E','A']
 numeros3 = [9,11,7,50]
-letras3 =  []
+letras3 =  ['B','C','A','E']
 
 #para o que vem a seguir, é legal usar a função
 #pprint, que imprime dicionarios de uma forma legivel
@@ -133,7 +133,7 @@ Insira o 100, depois o 30, depois o 40, depois o 110
 
 Já vou iniciar pra voce
 '''
-arvore100={'raiz':100,'direita':{},'esquerda':{}}
+arvore100={'raiz':100,'direita':{110},'esquerda':{30}}
 
 
 'Representar uma arvore vazia é bem fácil'
